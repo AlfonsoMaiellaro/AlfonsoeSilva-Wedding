@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Regali — Alfonso & Silvia</title>
+
+  <style>
+    :root{
+      --text:#fff;
+      --muted:rgba(255,255,255,.80);
+      --glass: rgba(10,12,16,.55);
+      --border: rgba(255,255,255,.18);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+      background:#07080b;
+      overflow-x:hidden;
+    }
+
+    /* SFONDO FOTO (come Programma) */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:url("assets/sfondo.jpeg");
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-position: 70% 85%;
+      z-index:-2;
+    }
+
+    /* OVERLAY (come Programma) */
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(900px 520px at 50% 35%, rgba(0,0,0,.10), rgba(0,0,0,.40) 70%),
+        linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.45));
+      z-index:-1;
+    }
+
+    a{color:inherit}
+
+    /* NAV */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:20;
+      padding:14px 16px;
+      background:rgba(0,0,0,.40);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.12)
+    }
+    .nav-inner{
+      width:min(1100px,100%);
+      margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;gap:12px
+    }
+    .brand{font-weight:800}
+    .menu{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{
+      text-decoration:none;font-weight:800;font-size:13px;
+      padding:10px 12px;border-radius:999px;border:1px solid transparent;
+      color:rgba(255,255,255,.86)
+    }
+    .menu a:hover{border-color:var(--border);background:rgba(255,255,255,.08);color:#fff}
+    .menu a.active{border-color:var(--border);background:rgba(255,255,255,.12);color:#fff}
+
+    /* CENTRATURA (come Programma) */
+    .wrap{
+      min-height:100svh;
+      display:grid;
+      place-items:center;
+      padding:92px 16px 64px;
+    }
+    .content{
+      width:min(820px,100%);
+    }
+
+    h1{margin:0 0 10px;font-size:34px;letter-spacing:-.4px}
+    p{margin:0 0 18px;color:var(--muted);line-height:1.5}
+
+    .card{
+      border:1px solid var(--border);
+      background:var(--glass);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 18px 60px rgba(0,0,0,.25);
+    }
+
+    .label{
+      margin:0 0 10px;
+      color:rgba(255,255,255,.86);
+      font-weight:950;
+    }
+
+    .iban{
+      font-weight:950;
+      font-size:16px;
+      letter-spacing:.4px;
+      word-break:break-word;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.25);
+    }
+
+    .tiny{
+      font-size:12px;
+      color:rgba(255,255,255,.72);
+      margin-top:10px;
+      line-height:1.4;
+    }
+
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 14px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.10);
+      text-decoration:none;font-weight:950
+    }
+    .btn:hover{background:rgba(255,255,255,.16)}
+  </style>
+</head>
+
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">Alfonso & Silvia</div>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="evento.html">Evento</a>
+      <a href="programma.html">Programma</a>
+      <a href="location.html">Chiesa &amp; Location</a>
+      <a href="rsvp.html">RSVP</a>
+      <a href="faq.html">FAQ</a>
+      <a class="active" href="regali.html">Regali</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="content">
+    <h1>Un pensiero per noi</h1>
+    <p>
+      La vostra presenza è il dono più prezioso.<br>
+      Se però vi fa piacere contribuire a un piccolo sogno che stiamo costruendo insieme,
+      qui trovate i dettagli per un pensiero.
+    </p>
+
+    <section class="card">
+      <p class="label">IBAN (intestato a Iannuzzi Silvia)</p>
+      <div class="iban">IT42K3608105138218610818636</div>
+
+      <p class="tiny">
+        Grazie di cuore ❤️
+      </p>
+
+      <div class="btnrow">
+        <a class="btn" href="rsvp.html">Vai a RSVP</a>
+        <a class="btn" href="contatti.html">Contattaci</a>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

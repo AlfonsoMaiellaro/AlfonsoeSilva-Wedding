@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chiesa &amp; Location — Alfonso & Silvia</title>
+
+  <style>
+    :root{
+      --text:#fff;
+      --muted:rgba(255,255,255,.80);
+      --glass: rgba(10,12,16,.55);
+      --border: rgba(255,255,255,.18);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+      background:#07080b;
+      overflow-x:hidden;
+    }
+
+    /* SFONDO FOTO (come Programma) */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:url("assets/sfondo.jpeg");
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-position: 70% 85%;
+      z-index:-2;
+    }
+
+    /* OVERLAY (come Programma) */
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(900px 520px at 50% 35%, rgba(0,0,0,.10), rgba(0,0,0,.40) 70%),
+        linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.45));
+      z-index:-1;
+    }
+
+    a{color:inherit}
+
+    /* NAV */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:20;
+      padding:14px 16px;
+      background:rgba(0,0,0,.40);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .nav-inner{
+      width:min(1100px,100%);
+      margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+    }
+    .brand{font-weight:800}
+    .menu{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{
+      text-decoration:none;font-weight:800;font-size:13px;
+      padding:10px 12px;border-radius:999px;border:1px solid transparent;
+      color:rgba(255,255,255,.86);
+    }
+    .menu a:hover{border-color:var(--border);background:rgba(255,255,255,.08);color:#fff}
+    .menu a.active{border-color:var(--border);background:rgba(255,255,255,.12);color:#fff}
+
+    /* LAYOUT */
+    .wrap{
+      width:min(1000px,100%);
+      margin:0 auto;
+      padding:92px 16px 64px;
+    }
+    h1{margin:0 0 10px;font-size:34px;letter-spacing:-.4px}
+    p{margin:0 0 18px;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+    @media (max-width:860px){.grid{grid-template-columns:1fr}}
+
+    .card{
+      border:1px solid var(--border);
+      background:var(--glass);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 18px 60px rgba(0,0,0,.25);
+    }
+
+    .photo{
+      height:240px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.14);
+      background-size:cover;
+      background-position:center;
+      margin:0 0 14px;
+      overflow:hidden;
+    }
+    @media (max-width:520px){.photo{height:200px}}
+
+    .k{font-size:12px;letter-spacing:.9px;text-transform:uppercase;color:rgba(255,255,255,.70);font-weight:900}
+    .v{font-size:18px;font-weight:950;margin:6px 0 8px}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      margin-top:10px;padding:12px 14px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.10);
+      text-decoration:none;font-weight:900;
+    }
+    .btn:hover{background:rgba(255,255,255,.16)}
+
+    iframe{width:100%;height:320px;border:0;border-radius:16px}
+    .small{font-size:12px;color:rgba(255,255,255,.70);margin-top:10px;line-height:1.4}
+    .sep{height:18px}
+  </style>
+</head>
+
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">Alfonso & Silvia</div>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="evento.html">Evento</a>
+      <a href="programma.html">Programma</a>
+      <a class="active" href="location.html">Chiesa &amp; Location</a>
+      <a href="rsvp.html">RSVP</a>
+      <a href="faq.html">FAQ</a>
+      <a href="regali.html">Regali</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Chiesa &amp; Location</h1>
+  <p>Qui trovi entrambe le tappe e puoi aprire il navigatore direttamente.</p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="k">Cerimonia</div>
+      <div class="photo" style="background-image:url('assets/cripta.jpeg');"></div>
+      <div class="v">Cripta del Duomo di Salerno</div>
+      <p>Via Roberto il Guiscardo, 1, 84121 Salerno SA</p>
+      <a class="btn" target="_blank" rel="noreferrer"
+         href="https://maps.google.com/?q=Cripta%20del%20Duomo%20di%20Salerno%2C%20Via%20Roberto%20il%20Guiscardo%201%2C%20Salerno">
+        Apri su Google Maps
+      </a>
+
+      <div class="sep"></div>
+
+      <div class="k">Ricevimento</div>
+      <div class="photo" style="background-image:url('assets/capodorso.jpeg');"></div>
+      <div class="v">Il Faro di Capo d’Orso</div>
+      <p>Strada Statale Amalfitana, 44, 84010 Maiori SA</p>
+      <a class="btn" target="_blank" rel="noreferrer"
+         href="https://maps.google.com/?q=Il%20Faro%20di%20Capo%20d%27Orso%2C%20Strada%20Statale%20Amalfitana%2044%2C%20Maiori">
+        Apri su Google Maps
+      </a>
+
+      <p class="small">Se vuoi, possiamo aggiungere info su parcheggi / navette / taxi.</p>
+    </section>
+
+    <section class="card">
+      <div class="k">Mappa (precisa)</div>
+
+      <div class="v">Cripta del Duomo</div>
+      <iframe
+        title="Mappa Cripta del Duomo"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96480.43138579538!2d14.644768397265635!3d40.91545030000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bcc536a4f9d2f%3A0xfec2d8ac8b31fd59!2sCripta%20del%20Duomo!5e0!3m2!1sit!2sit!4v1770393619968!5m2!1sit!2sit">
+      </iframe>
+
+      <div style="height:14px"></div>
+
+      <div class="v">Il Faro di Capo d’Orso</div>
+      <iframe
+        title="Mappa Il Faro di Capo d'Orso"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24221.33908677206!2d14.64298189702661!3d40.63721668642878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133beac16bc195f5%3A0x8273c87a63bae16f!2sIl%20Faro%20di%20Capo%20d%27Orso!5e0!3m2!1sit!2sit!4v1770393706497!5m2!1sit!2sit">
+      </iframe>
+
+      <p class="small">Puoi aprire le mappe anche dai bottoni a sinistra.</p>
+    </section>
+  </div>
+</main>
+</body>
+</html>

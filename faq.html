@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQ — Alfonso & Silvia</title>
+
+  <style>
+    :root{
+      --text:#fff;
+      --muted:rgba(255,255,255,.80);
+      --glass: rgba(10,12,16,.55);
+      --border: rgba(255,255,255,.18);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+      background:#07080b;
+      overflow-x:hidden;
+    }
+
+    /* SFONDO FOTO (come Programma) */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:url("assets/sfondo.jpeg");
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-position: 70% 85%;
+      z-index:-2;
+    }
+
+    /* OVERLAY (come Programma) */
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(900px 520px at 50% 35%, rgba(0,0,0,.10), rgba(0,0,0,.40) 70%),
+        linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.45));
+      z-index:-1;
+    }
+
+    a{color:inherit}
+
+    /* NAV */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:20;
+      padding:14px 16px;
+      background:rgba(0,0,0,.40);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.12)
+    }
+    .nav-inner{
+      width:min(1100px,100%);
+      margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;gap:12px
+    }
+    .brand{font-weight:800}
+    .menu{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{
+      text-decoration:none;font-weight:800;font-size:13px;
+      padding:10px 12px;border-radius:999px;border:1px solid transparent;
+      color:rgba(255,255,255,.86)
+    }
+    .menu a:hover{border-color:var(--border);background:rgba(255,255,255,.08);color:#fff}
+    .menu a.active{border-color:var(--border);background:rgba(255,255,255,.12);color:#fff}
+
+    /* CENTRATURA CONTENUTO (come Programma) */
+    .wrap{
+      min-height:100svh;
+      display:grid;
+      place-items:center;
+      padding:92px 16px 64px;
+    }
+    .content{
+      width:min(820px,100%);
+    }
+
+    h1{margin:0 0 10px;font-size:34px;letter-spacing:-.4px}
+    p{margin:0 0 18px;color:var(--muted)}
+
+    details{
+      border:1px solid var(--border);
+      background:var(--glass);
+      border-radius:16px;
+      padding:12px 14px;
+      box-shadow:0 18px 60px rgba(0,0,0,.25);
+    }
+    details + details{margin-top:10px}
+    summary{cursor:pointer;font-weight:950}
+    .ans{margin-top:8px;color:var(--muted)}
+  </style>
+</head>
+
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">Alfonso & Silvia</div>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="evento.html">Evento</a>
+      <a href="programma.html">Programma</a>
+      <a href="location.html">Chiesa &amp; Location</a>
+      <a href="rsvp.html">RSVP</a>
+      <a class="active" href="faq.html">FAQ</a>
+      <a href="regali.html">Regali</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="content">
+    <h1>FAQ</h1>
+    <p>Risposte rapide alle domande più comuni.</p>
+
+    <details>
+      <summary>Entro quando devo confermare?</summary>
+      <div class="ans">Entro il <strong>20 Giugno 2026</strong>, così organizziamo tutto al meglio.</div>
+    </details>
+
+    <details>
+      <summary>Come posso confermare?</summary>
+      <div class="ans">Con l’RSVP sul sito (super comodo). Se preferisci, va benissimo anche un messaggio o una chiamata: trovi i numeri in Contatti 😊</div>
+    </details>
+
+    <details>
+      <summary>Ci sono opzioni per intolleranze o restrizioni alimentari?</summary>
+      <div class="ans">Certo: inserisci tutto nel modulo RSVP e ci pensiamo noi.</div>
+    </details>
+
+    <details>
+      <summary>C’è un dress code?</summary>
+      <div class="ans">Elegante, ma comodo: l’importante è ballare (e arrivare con il sorriso) ✨<br>
+      Consiglio da amici: scarpe comode sempre una buona idea.</div>
+    </details>
+  </div>
+</main>
+</body>
+</html>

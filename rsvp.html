@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RSVP — Alfonso & Silvia</title>
+
+  <style>
+    :root{
+      --text:#fff;
+      --muted:rgba(255,255,255,.78);
+      --glass: rgba(10,12,16,.55);
+      --border: rgba(255,255,255,.18);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+      background:#07080b;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:url("assets/sfondo.jpeg");
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-position: 70% 85%;
+      opacity:1;
+      z-index:-2;
+    }
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(900px 520px at 50% 35%, rgba(0,0,0,.10), rgba(0,0,0,.40) 70%),
+        linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.45));
+      z-index:-1;
+    }
+
+    a{color:inherit}
+
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:20;
+      padding:14px 16px;
+      background:rgba(0,0,0,.40);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.12)
+    }
+    .nav-inner{
+      width:min(1100px,100%);
+      margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;gap:12px
+    }
+    .brand{font-weight:800}
+    .menu{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .menu a{
+      text-decoration:none;font-weight:800;font-size:13px;
+      padding:10px 12px;border-radius:999px;border:1px solid transparent;
+      color:rgba(255,255,255,.86)
+    }
+    .menu a:hover{border-color:var(--border);background:rgba(255,255,255,.08);color:#fff}
+    .menu a.active{border-color:var(--border);background:rgba(255,255,255,.12);color:#fff}
+
+    /* ✅ CENTRATURA COME PROGRAMMA */
+    .wrap{
+      min-height:100svh;
+      display:grid;
+      place-items:center;
+      padding:92px 16px 64px;
+    }
+    .content{
+      width:min(820px,100%);
+    }
+
+    h1{margin:0 0 10px;font-size:34px;letter-spacing:-.4px}
+    p{margin:0 0 18px;color:var(--muted)}
+
+    .card{
+      border:1px solid var(--border);
+      background:var(--glass);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 18px 60px rgba(0,0,0,.25)
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      margin-top:10px;padding:12px 14px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.10);
+      text-decoration:none;font-weight:900
+    }
+    .btn:hover{background:rgba(255,255,255,.16)}
+    .small{font-size:12px;color:rgba(255,255,255,.70);margin-top:10px}
+  </style>
+</head>
+
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">Alfonso & Silvia</div>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="evento.html">Evento</a>
+      <a href="programma.html">Programma</a>
+      <a href="location.html">Chiesa &amp; Location</a>
+      <a class="active" href="rsvp.html">RSVP</a>
+      <a href="faq.html">FAQ</a>
+      <a href="regali.html">Regali</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="content">
+    <h1>RSVP</h1>
+    <p>Conferma la tua presenza tramite il modulo qui sotto.</p>
+
+    <section class="card">
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSev_wvk0_GFHD54z9lt7cpu3dRcEWDPRREAroY-0sifc5AQew/viewform?usp=header" target="_blank" rel="noreferrer">
+        Apri il modulo RSVP
+      </a>
+      <p class="small">Se non si apre, prova a copiare il link e incollarlo nel browser.</p>
+    </section>
+  </div>
+</main>
+</body>
+</html>

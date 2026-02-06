@@ -16,7 +16,9 @@
       --accent2:rgba(255,255,255,.86);
       --radius:18px;
     }
+
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
       margin:0;
       font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
@@ -26,6 +28,7 @@
     }
     a{color:inherit}
 
+    /* NAV */
     .nav{
       position:fixed;top:0;left:0;right:0;z-index:50;
       display:flex;align-items:center;justify-content:center;
@@ -52,6 +55,7 @@
     .menu a:hover{border-color:var(--border); background: rgba(0,0,0,.18); color:var(--text)}
     .menu a.active{border-color:var(--border); background: rgba(0,0,0,.28); color:var(--text)}
 
+    /* BOTTONI */
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       padding:12px 14px;border-radius:999px;
@@ -61,16 +65,17 @@
     }
     .btn:hover{background: rgba(0,0,0,.38)}
 
+    /* HERO */
     .hero{
       min-height:100svh;
       position:relative;
       display:grid;
       place-items:center;
-      padding:110px 16px 36px; /* base */
+      padding:110px 16px 36px; /* desktop base */
       overflow:hidden;
     }
 
-    /* ✅ MOBILE: più spazio sopra (menu su 2 righe) */
+    /* ✅ MOBILE: più spazio sopra per menu su 2 righe */
     @media (max-width:700px){
       .hero{ padding-top:155px; }
     }
@@ -80,10 +85,11 @@
       position:absolute;inset:0;
       background-image:url("assets/hero.jpeg");
       background-size:cover;
-      background-position:50% 70%;
+      background-position:50% 70%;  /* desktop */
       transform: scale(1.02);
       pointer-events:none;
     }
+
     .hero::after{
       content:"";
       position:absolute;inset:0;
@@ -93,6 +99,7 @@
       pointer-events:none;
     }
 
+    /* CARD */
     .card{
       position:relative;
       z-index:2;
@@ -103,12 +110,10 @@
       background: var(--glass);
       box-shadow: 0 18px 60px rgba(0,0,0,.35);
       text-align:center;
-
-      /* ✅ NIENTE più spostamento verso l’alto (era la causa principale su mobile) */
-      transform:none;
+      transform:none; /* niente spostamento su mobile */
     }
 
-    /* ✅ Se vuoi “effetto su desktop”, lo facciamo SOLO su schermi grandi */
+    /* ✅ solo desktop “effetto elegante” */
     @media (min-width:900px){
       .card{ transform: translateY(-40px); }
     }
@@ -125,23 +130,20 @@
       border:1px solid var(--border);
       background: rgba(0,0,0,.25);
     }
-    h1{margin:14px 0 8px;font-size:54px;letter-spacing:-.8px;line-height:1.02}
-    @media (max-width:560px){h1{font-size:40px}}
 
+    h1{margin:14px 0 8px;font-size:54px;letter-spacing:-.8px;line-height:1.02}
     .sub{margin:0 auto 18px;max-width:55ch;color:var(--muted);font-size:16px}
 
     .cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-
     .cta .btn.primary{
       background: rgba(255,255,255,.92);
       color:#0b0c10;
-      border-color: rgba(255,255,255,.92)
+      border-color: rgba(255,255,255,.92);
     }
     .cta .btn.primary:hover{background:#fff}
 
     .mini{margin-top:18px;color:rgba(255,255,255,.70);font-size:12px}
 
-    /* Link “Chiesa & Location” sotto al titolo: rendiamolo più carino e distanziato */
     .quicklink{
       display:inline-block;
       margin:0 0 10px;
@@ -150,6 +152,29 @@
       opacity:.9;
     }
     .quicklink:hover{opacity:1;text-decoration:underline}
+
+    /* ✅ MOBILE: rende la card più compatta e lascia più foto visibile */
+    @media (max-width:560px){
+      /* inquadratura foto SOLO su mobile (prova 30% / 35% / 40%) */
+      .hero::before{ background-position:50% 35%; }
+
+      .card{
+        width:min(720px, 94%);
+        padding:18px 16px;   /* più compatta */
+      }
+
+      h1{font-size:36px}
+      .kicker{font-size:12px;padding:8px 12px}
+      .sub{font-size:14px;margin-bottom:14px}
+
+      /* bottoni in colonna */
+      .cta{
+        flex-direction:column;
+        align-items:stretch;
+        gap:10px;
+      }
+      .cta .btn{width:100%}
+    }
   </style>
 </head>
 

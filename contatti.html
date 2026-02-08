@@ -32,7 +32,7 @@
       background-image:url("assets/sfondo.jpeg");
       background-size:cover;
       background-repeat:no-repeat;
-      background-position: 70% 85%;
+      background-position:70% 85%;
       z-index:-2;
     }
 
@@ -55,37 +55,38 @@
       padding:14px 16px;
       background:rgba(0,0,0,.40);
       backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(255,255,255,.12)
+      border-bottom:1px solid rgba(255,255,255,.12);
     }
     .nav-inner{
       width:min(1100px,100%);
       margin:0 auto;
-      display:flex;align-items:center;justify-content:space-between;gap:12px
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
     }
     .brand{font-weight:800}
     .menu{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
     .menu a{
       text-decoration:none;font-weight:800;font-size:13px;
       padding:10px 12px;border-radius:999px;border:1px solid transparent;
-      color:rgba(255,255,255,.86)
+      color:rgba(255,255,255,.86);
+      white-space:nowrap;
     }
     .menu a:hover{border-color:var(--border);background:rgba(255,255,255,.08);color:#fff}
     .menu a.active{border-color:var(--border);background:rgba(255,255,255,.12);color:#fff}
 
-    /* CENTRATURA (come Programma) */
+    /* CONTENUTO */
     .wrap{
       min-height:100svh;
       display:grid;
       place-items:center;
-      padding:92px 16px 64px;
-      @media (max-width: 700px){
-      .wrap{ padding-top: 220px; }  /* se ancora copre: metti 155px */
+      padding:92px 16px 64px;   /* desktop */
     }
 
+    /* ✅ MOBILE: più spazio sopra (menu alto su 2 righe) */
+    @media (max-width:700px){
+      .wrap{ padding-top:220px; } /* <-- cambia SOLO questo numero se serve */
     }
-    .content{
-      width:min(820px,100%);
-    }
+
+    .content{width:min(820px,100%)}
 
     h1{margin:0 0 10px;font-size:34px;letter-spacing:-.4px}
     p{margin:0 0 18px;color:var(--muted)}
@@ -172,9 +173,3 @@
 </main>
 </body>
 </html>
-
-
-
-
-
-

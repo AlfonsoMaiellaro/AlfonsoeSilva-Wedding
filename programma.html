@@ -69,6 +69,7 @@
       text-decoration:none;font-weight:800;font-size:13px;
       padding:10px 12px;border-radius:999px;border:1px solid transparent;
       color:rgba(255,255,255,.86);
+      white-space:nowrap;
     }
     .menu a:hover{border-color:var(--border);background:rgba(255,255,255,.08);color:#fff}
     .menu a.active{border-color:var(--border);background:rgba(255,255,255,.12);color:#fff}
@@ -136,12 +137,18 @@
       color:rgba(255,255,255,.70);
       font-weight:900;
     }
+
+    /* =========================================================
+       ✅ QUI CAMBI LA GRANDEZZA DI "Elegante"
+       -> modifica SOLO questo numero (12px, 14px, 16px, ecc.)
+       ========================================================= */
     .note .v{
       margin:0 0 8px;
-      font-size:22px;
+      font-size:12px; /* <<< MUOVI QUESTO (dimensione "Elegante") */
       font-weight:950;
-      letter-spacing:-.4px;
+      letter-spacing:-.2px;
     }
+
     .note .p{
       margin:0;
       color:rgba(255,255,255,.80);
@@ -150,7 +157,8 @@
     }
 
     @media (max-width:560px){
-      .note .v{font-size:22px}
+      /* ✅ QUI CAMBI LA GRANDEZZA DI "Elegante" SU MOBILE */
+      .note .v{font-size:12px} /* <<< MUOVI QUESTO (mobile) */
       .note .p{font-size:16px}
     }
   </style>
@@ -176,7 +184,7 @@
 <main class="wrap">
   <div class="content">
     <h1>Programma</h1>
-    
+
     <section class="card">
       <div class="row">
         <div class="time">16:00</div>
@@ -213,4 +221,3 @@
 </main>
 </body>
 </html>
-

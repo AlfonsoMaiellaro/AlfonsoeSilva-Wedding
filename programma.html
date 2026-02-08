@@ -32,7 +32,7 @@
       background-image:url("assets/sfondo.jpeg");
       background-size:cover;
       background-repeat:no-repeat;
-      background-position: 70% 85%;
+      background-position:70% 85%;
       opacity:1;
       z-index:-2;
     }
@@ -66,24 +66,31 @@
     .brand{font-weight:800}
     .menu{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
     .menu a{
-      text-decoration:none;font-weight:800;font-size:13px;
-      padding:10px 12px;border-radius:999px;border:1px solid transparent;
+      text-decoration:none;
+      font-weight:800;
+      font-size:13px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid transparent;
       color:rgba(255,255,255,.86);
+
+      /* ✅ IMPORTANTE: evita che i link vadano a capo e facciano crescere il menu */
+      white-space:nowrap;  /* <<< AGGIUNTO */
     }
     .menu a:hover{border-color:var(--border);background:rgba(255,255,255,.08);color:#fff}
     .menu a.active{border-color:var(--border);background:rgba(255,255,255,.12);color:#fff}
 
-    /* ✅ CENTRATURA CONTENUTO */
+    /* ✅ CONTENUTO */
     .wrap{
       min-height:100svh;
       display:grid;
       place-items:center;
-      padding:92px 16px 64px;
+      padding:92px 16px 64px; /* desktop */
     }
 
-    /* ✅ MOBILE: più spazio sopra (navbar alta) */
+    /* ✅ MOBILE: spazio sopra (menu più alto) */
     @media (max-width:700px){
-      .wrap{ padding-top:220px; }
+      .wrap{ padding-top:260px; } /* <<< CAMBIA QUESTO NUMERO se serve (240/260/280) */
     }
 
     .content{ width:min(1000px,100%); }
@@ -138,10 +145,7 @@
     }
     .note .v{
       margin:0 0 8px;
-
-      /* <<< QUI CAMBI LA DIMENSIONE DI "ELEGANTE" >>> */
-      font-size:18px;
-
+      font-size:18px; /* <<< DIMENSIONE "Elegante" (vale per desktop e mobile) */
       font-weight:950;
       letter-spacing:-.4px;
     }
@@ -152,12 +156,7 @@
       line-height:1.4;
     }
 
-    /* Se vuoi che su mobile sia diverso, cambia anche qui */
     @media (max-width:560px){
-      .note .v{
-        /* <<< QUI CAMBI LA DIMENSIONE DI "ELEGANTE" SU MOBILE >>> */
-        font-size:18px;
-      }
       .note .p{font-size:16px}
     }
   </style>
@@ -209,7 +208,6 @@
       </div>
     </section>
 
-    <!-- ✅ DRESS CODE -->
     <section class="note" aria-label="Dress code">
       <p class="k">Dress code</p>
       <p class="v">Elegante</p>
@@ -220,6 +218,3 @@
 </main>
 </body>
 </html>
-
-
-

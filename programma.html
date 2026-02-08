@@ -86,9 +86,7 @@
       .wrap{ padding-top:155px; }
     }
 
-    .content{
-      width:min(1000px,100%);
-    }
+    .content{ width:min(1000px,100%); }
 
     h1{margin:0 0 10px;font-size:34px;letter-spacing:-.4px}
     p{margin:0 0 18px;color:var(--muted)}
@@ -120,6 +118,41 @@
     }
     .t{margin:0;font-weight:900}
     .d{margin:4px 0 0;color:var(--muted)}
+
+    /* ✅ NOTA “Dress code” (diversa dalle righe del programma) */
+    .note{
+      margin-top:14px;
+      padding:18px 18px;
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.28);
+      box-shadow:0 18px 60px rgba(0,0,0,.22);
+    }
+    .note .k{
+      margin:0 0 6px;
+      font-size:12px;
+      letter-spacing:.9px;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.70);
+      font-weight:900;
+    }
+    .note .v{
+      margin:0 0 8px;
+      font-size:26px;
+      font-weight:950;
+      letter-spacing:-.4px;
+    }
+    .note .p{
+      margin:0;
+      color:rgba(255,255,255,.80);
+      font-size:18px;
+      line-height:1.4;
+    }
+
+    @media (max-width:560px){
+      .note .v{font-size:22px}
+      .note .p{font-size:16px}
+    }
   </style>
 </head>
 
@@ -168,10 +201,15 @@
         </div>
       </div>
     </section>
+
+    <!-- ✅ DRESS CODE (riquadro “nota”, diverso dal programma) -->
+    <section class="note" aria-label="Dress code">
+      <p class="k">Dress code</p>
+      <p class="v">Elegante</p>
+      <p class="p">Consigliamo scarpe comode per muoversi serenamente durante la giornata.</p>
+    </section>
+
   </div>
 </main>
 </body>
 </html>
-
-
-

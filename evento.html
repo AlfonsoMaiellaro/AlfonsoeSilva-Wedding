@@ -77,7 +77,7 @@
     .wrap{
       width:min(1000px,100%);
       margin:0 auto;
-      padding:92px 16px 70px;
+      padding:92px 16px 70px; /* desktop */
     }
 
     /* ✅ MOBILE: più spazio sopra (navbar alta) */
@@ -123,6 +123,21 @@
       overflow:hidden;
     }
     @media (max-width:560px){.photo{height:210px}}
+
+    /* ✅ mini descrizione sotto la foto */
+    .info{
+      margin:10px 0 0;
+      color:rgba(255,255,255,.78);
+      line-height:1.45;
+      font-size:14px;
+    }
+    .info a{
+      font-weight:900;
+      text-decoration:underline;
+      text-underline-offset:3px;
+      opacity:.95;
+    }
+    .info a:hover{opacity:1}
   </style>
 </head>
 
@@ -155,6 +170,12 @@
 
       <div class="photo" style="background-image:url('assets/cripta.jpeg');"></div>
 
+      <!-- ✅ TESTO + LINK (sotto la foto, prima di Maps) -->
+      <p class="info">
+        Un luogo suggestivo e ricco di storia, costruito attorno al sepolcro di San Matteo.<br>
+        Scopri di più sulla Cripta: <a href="https://www.cattedraledisalerno.it/la-cripta.html" target="_blank" rel="noreferrer">cattedraledisalerno.it</a>
+      </p>
+
       <a class="btn" target="_blank" rel="noreferrer"
          href="https://maps.google.com/?q=Cripta%20del%20Duomo%20di%20Salerno%2C%20Via%20Roberto%20il%20Guiscardo%201%2C%20Salerno">
         Apri su Google Maps
@@ -167,6 +188,12 @@
       <p class="p">Strada Statale Amalfitana, 44, 84010 Maiori SA</p>
 
       <div class="photo" style="background-image:url('assets/capodorso.jpeg');"></div>
+
+      <!-- ✅ TESTO + LINK (sotto la foto, prima di Maps) -->
+      <p class="info">
+        Una location sulla Costiera Amalfitana con vista mare: qui ci aspetta cena e festa 🎉<br>
+        Dai un’occhiata al sito: <a href="https://www.ilfarodicapodorso.it/it/" target="_blank" rel="noreferrer">ilfarodicapodorso.it</a>
+      </p>
 
       <a class="btn" target="_blank" rel="noreferrer"
          href="https://maps.google.com/?q=Il%20Faro%20di%20Capo%20d%27Orso%2C%20Strada%20Statale%20Amalfitana%2044%2C%20Maiori">
@@ -185,4 +212,3 @@
 </main>
 </body>
 </html>
-

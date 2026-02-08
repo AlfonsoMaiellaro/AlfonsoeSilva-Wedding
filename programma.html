@@ -66,10 +66,9 @@
     .brand{font-weight:800}
     .menu{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
     .menu a{
-      text-decoration:none;font-weight:800;font-size:18px;
+      text-decoration:none;font-weight:800;font-size:13px;
       padding:10px 12px;border-radius:999px;border:1px solid transparent;
       color:rgba(255,255,255,.86);
-      white-space:nowrap;
     }
     .menu a:hover{border-color:var(--border);background:rgba(255,255,255,.08);color:#fff}
     .menu a.active{border-color:var(--border);background:rgba(255,255,255,.12);color:#fff}
@@ -137,18 +136,15 @@
       color:rgba(255,255,255,.70);
       font-weight:900;
     }
-
-    /* =========================================================
-       ✅ QUI CAMBI LA GRANDEZZA DI "Elegante"
-       -> modifica SOLO questo numero (12px, 14px, 16px, ecc.)
-       ========================================================= */
     .note .v{
       margin:0 0 8px;
-      font-size:12px; /* <<< MUOVI QUESTO (dimensione "Elegante") */
-      font-weight:950;
-      letter-spacing:-.2px;
-    }
 
+      /* <<< QUI CAMBI LA DIMENSIONE DI "ELEGANTE" >>> */
+      font-size:20px;
+
+      font-weight:950;
+      letter-spacing:-.4px;
+    }
     .note .p{
       margin:0;
       color:rgba(255,255,255,.80);
@@ -156,9 +152,12 @@
       line-height:1.4;
     }
 
+    /* Se vuoi che su mobile sia diverso, cambia anche qui */
     @media (max-width:560px){
-      /* ✅ QUI CAMBI LA GRANDEZZA DI "Elegante" SU MOBILE */
-      .note .v{font-size:12px} /* <<< MUOVI QUESTO (mobile) */
+      .note .v{
+        /* <<< QUI CAMBI LA DIMENSIONE DI "ELEGANTE" SU MOBILE >>> */
+        font-size:20px;
+      }
       .note .p{font-size:16px}
     }
   </style>
@@ -210,7 +209,7 @@
       </div>
     </section>
 
-    <!-- ✅ DRESS CODE (riquadro “nota”, diverso dal programma) -->
+    <!-- ✅ DRESS CODE -->
     <section class="note" aria-label="Dress code">
       <p class="k">Dress code</p>
       <p class="v">Elegante</p>
@@ -221,4 +220,3 @@
 </main>
 </body>
 </html>
-
